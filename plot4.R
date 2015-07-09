@@ -88,3 +88,4 @@ with(df, {
 Sys.setlocale(category = "LC_ALL", locale = oldlocale)  ## switch back to original setting
 
 dev.off()
+par(mfrow=c(1,1))
