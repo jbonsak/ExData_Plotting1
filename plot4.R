@@ -45,7 +45,7 @@ df$DateTime <- as.POSIXct(paste(df$Date, df$Time))#, format="%Y-%m-%d %H:%M:%S")
 
 ###########    Plot 4     ##############
 
-png("plot4.png",480,480)
+png("plot4.png",480,480, type="cairo") ## Windows OS, cairo to get close to the correct line width
 
 oldlocale <- Sys.getlocale(category="LC_ALL") ## store current locale setting
 
@@ -78,7 +78,7 @@ with(df, {
         
         plot(df$Global_reactive_power ~ df$DateTime,                                      ## bottom right
                             type="l",
-                            lwd=0.1,
+                            lwd=0.7,
                             xlab="datetime",
                             ylab="Global_reactive_power")  
                        
